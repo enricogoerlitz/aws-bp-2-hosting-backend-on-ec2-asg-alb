@@ -1,1 +1,10 @@
-# pull docker image
+version: '3.8'
+
+services:
+  flask-app:
+    image: enricogoerlitz/bp2-backend:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+    restart: always
