@@ -7,17 +7,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def healthcheck():
-    host_ip = socket.gethostbyname(socket.gethostname())
+    internal_ip = socket.gethostbyname(socket.gethostname())
     return jsonify({
         "healthcheck": "ok",
-        "host": host_ip
+        "internal_ip": internal_ip
     })
 
 
 @app.route('/host')
 def host_ip():
-    host_ip = socket.gethostbyname(socket.gethostname())
-    return jsonify({"host_ip": host_ip})
+    internal_ip = socket.gethostbyname(socket.gethostname())
+    return jsonify({"internal_ip": internal_ip})
 
 
 if __name__ == '__main__':
