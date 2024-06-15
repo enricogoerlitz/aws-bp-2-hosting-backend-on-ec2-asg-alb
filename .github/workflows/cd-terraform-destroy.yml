@@ -1,4 +1,4 @@
-name: Terraform Deployment
+name: Terraform Destroy Infrastructure
 
 on:
   pull_request:
