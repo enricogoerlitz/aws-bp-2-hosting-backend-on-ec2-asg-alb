@@ -4,6 +4,7 @@
 
 ```bash
 python -m venv venv
+python -m unittest ./tests/test_app.py
 ```
 
 ```bash
