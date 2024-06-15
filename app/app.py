@@ -10,7 +10,8 @@ def healthcheck():
     internal_ip = socket.gethostbyname(socket.gethostname())
     return jsonify({
         "healthcheck": "ok",
-        "internal_ip": internal_ip
+        "internal_ip": internal_ip,
+        "version": "v1"
     })
 
 
