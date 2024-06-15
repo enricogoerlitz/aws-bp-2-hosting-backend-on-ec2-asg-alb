@@ -1,4 +1,4 @@
-name: CI/CD-Backend Pipeline
+name: CD-Backend Pipeline
 
 on:
   workflow_run:
@@ -8,7 +8,6 @@ on:
 
 
 jobs:
-
   cd-Backend:
     if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
