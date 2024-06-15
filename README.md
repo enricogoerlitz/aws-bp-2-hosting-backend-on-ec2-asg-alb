@@ -1,6 +1,7 @@
 # Hosting Backend Application on EC2 Instances with Auto-Scaling and Load Balancer
 
-[![CI-Backend](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/ci-backend-tests.yml/badge.svg)](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/ci-backend-tests.yml)
+[![CI-Backend](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/ci-backend.yml/badge.svg)](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/ci-backend.yml)
+[![CD-Backend](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/cd-backend.yml/badge.svg)](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/cd-backend.yml)
 
 # Init Backend
 
