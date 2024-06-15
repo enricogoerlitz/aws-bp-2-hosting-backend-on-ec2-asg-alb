@@ -34,7 +34,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build --platform linux/amd64/v2 -t enricogoerlitz/bp2-backend-amd64v2 .
+        docker build --platform linux/amd64/v2 -t enricogoerlitz/bp2-backend-amd64v2 -f ./docker/Dockerfile .
 
     - name: Push Docker image
       run: |
