@@ -1,0 +1,40 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*",
+                "ec2:RunInstances",
+                "ec2:CreateSecurityGroup",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:CreateKeyPair",
+                "ec2:CreateLaunchTemplate",
+                "ec2:ModifyLaunchTemplate",
+                "ec2:TerminateInstances",
+                "autoscaling:CreateAutoScalingGroup",
+                "autoscaling:UpdateAutoScalingGroup",
+                "autoscaling:Describe*",
+                "elasticloadbalancing:CreateLoadBalancer",
+                "elasticloadbalancing:CreateTargetGroup",
+                "elasticloadbalancing:CreateListener",
+                "elasticloadbalancing:ModifyListener",
+                "elasticloadbalancing:DeleteListener",
+                "elasticloadbalancing:Describe*",
+                "route53:ChangeResourceRecordSets",
+                "route53:GetHostedZone",
+                "acm:DescribeCertificate",
+                "acm:GetCertificate",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "acm:ListCertificates",
+            "Resource": "*"
+        }
+    ]
+}

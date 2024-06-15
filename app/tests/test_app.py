@@ -15,29 +15,29 @@ class FlaskAppTests(unittest.TestCase):
         hostname = os.uname()[1]
 
         # WHEN
-        response = self.app.get('/')
+        response = self.app.get("/")
         data = response.get_json()
 
         # THEN
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(data['healthcheck'], 'ok')
-        self.assertEqual(data['hostname'], hostname)
+        self.assertEqual(data["healthcheck"], "ok")
+        self.assertEqual(data["hostname"], hostname)
 
     def test_host_ip(self):
         # GIVEN
         ip = os.uname()[1]
 
         # WHEN
-        response = self.app.get('/host')
+        response = self.app.get("/host")
         data = response.get_json()
 
         # THEN
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(data['hostname'], ip)
+        self.assertEqual(data["hostname"], ip)
 
     # def test_fail(self):
     #     self.assertEqual(True, False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
