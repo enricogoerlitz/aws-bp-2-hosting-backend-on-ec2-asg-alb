@@ -23,4 +23,5 @@ jobs:
 
     - name: Run tests
       run: |
+        cd app
         python -m unittest ./tests/test_app.py
