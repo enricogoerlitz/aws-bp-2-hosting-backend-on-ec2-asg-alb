@@ -1,10 +1,10 @@
 name: CD-Backend Deploy Docker image
 
-on:
-  workflow_run:
-    workflows: ["CI-Backend"]
-    types:
-      - completed
+on: []
+  # workflow_run:
+  #   workflows: ["CI-Backend"]
+  #   types:
+  #     - completed
   # pull_request:
   #   branches:
   #     - main
