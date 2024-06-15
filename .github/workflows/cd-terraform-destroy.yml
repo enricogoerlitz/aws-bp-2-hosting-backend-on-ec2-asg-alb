@@ -1,6 +1,9 @@
 name: Destroy Infrastructure
 
 on:
+  push:
+    branches:
+      - destroy-infra
   pull_request:
     branches:
       - destroy-infra
