@@ -5,9 +5,9 @@ on:
     workflows: ["CI-Backend"]
     types:
       - completed
-  pull_request:
-    branches:
-      - main
+  # pull_request:
+  #   branches:
+  #     - main
 
 jobs:
   deploy-docker-image:
