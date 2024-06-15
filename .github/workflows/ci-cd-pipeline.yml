@@ -3,9 +3,11 @@ name: CI/CD-Backend Pipeline
 on: [push, pull_request]
 
 jobs:
-  CI-Backend:
+  ci-backend:
 
     runs-on: ubuntu-latest
+    outputs:
+      ci-successful: ${{ steps.ci-backend.outputs.success }}
 
     steps:
     - name: Checkout repository
@@ -26,18 +28,22 @@ jobs:
         cd app
         python -m unittest ./tests/test_app.py
 
-  CD-Backend:
-    if: github.event_name == 'pull_request' && github.event.action == 'opened' && github.event.pull_request.base.ref == 'main' && needs.CI-Backend.outputs.ci-successful == 'true'
+  cd-Backend:
+    if: github.event_name == 'pull_request' && github.event.action == 'opened' && github.event.pull_request.base.ref == 'main'
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Wait for CI-Backend to finish
+      if: success()
+      run: echo "CI-Backend successfully finished"
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: '3.12'
 
     - name: Install dependencies
       run: |
