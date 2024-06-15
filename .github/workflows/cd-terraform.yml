@@ -1,4 +1,4 @@
-name: Terraform Deployment
+name: Deploy Infrastructure
 
 on:
   pull_request:
