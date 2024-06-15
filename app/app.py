@@ -11,7 +11,7 @@ def healthcheck():
     return jsonify({
         "healthcheck": "ok",
         "internal_ip": internal_ip,
-        "version": "v1"
+        "version": "v2"
     })
 
 
@@ -22,4 +22,4 @@ def host_ip():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=80)
