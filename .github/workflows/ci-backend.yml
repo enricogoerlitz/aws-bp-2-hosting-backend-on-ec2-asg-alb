@@ -2,7 +2,8 @@ name: CI-Backend Workflow
 
 on:
   pull_request:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
   ci-backend:
