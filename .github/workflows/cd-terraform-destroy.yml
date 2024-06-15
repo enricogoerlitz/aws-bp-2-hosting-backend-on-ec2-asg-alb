@@ -1,6 +1,9 @@
-name: Terraform Destroy Infrastructure
+name: Destroy Infrastructure
 
 on:
+  push:
+    branches:
+      - destroy-infra
   pull_request:
     branches:
       - destroy-infra
@@ -15,7 +18,7 @@ env:
   AWS_REGION: ${{ secrets.AWS_REGION }}
 
 jobs:
-  deploy:
+  destroy:
     runs-on: ubuntu-latest
 
     defaults:

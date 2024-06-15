@@ -1,4 +1,4 @@
-name: Terraform Deployment
+name: Deploy Infrastructure
 
 on:
   pull_request:
@@ -39,6 +39,11 @@ jobs:
         with:
           terraform_version: 1.5.7
 
+      - name: Terraform fmt
+        id: fmt
+        run: terraform fmt -check
+        continue-on-error: true
+
       - name: Terraform Init
         id: init
         env:
@@ -61,5 +66,4 @@ jobs:
         run: exit 1
 
       - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
