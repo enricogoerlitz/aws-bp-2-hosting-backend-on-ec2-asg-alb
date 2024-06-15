@@ -5,7 +5,7 @@ on:
     workflows: ["CI"]
     types:
       - completed
-  push:
+  pull_request:
     branches:
       - main
 
