@@ -2,6 +2,8 @@
 
 [![CI-Backend](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/ci-backend.yml/badge.svg)](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/ci-backend.yml)
 [![CD-Backend](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/cd-backend.yml/badge.svg)](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/cd-backend.yml)
+[![Deploy Infrastructure](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/cd-terraform.yml/badge.svg)](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/cd-terraform.yml)
+[![Destroy Infrastructure](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/cd-terraform-destroy.yml/badge.svg)](https://github.com/enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb/actions/workflows/cd-terraform-destroy.yml)
 
 # Init Backend
 
