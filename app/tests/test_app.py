@@ -1,5 +1,5 @@
 import unittest
-import socket
+import os
 
 from app import app
 
@@ -12,7 +12,7 @@ class FlaskAppTests(unittest.TestCase):
 
     def test_healthcheck(self):
         # GIVEN
-        ip = socket.gethostbyname(socket.gethostname())
+        hostname = os.uname()[1]
 
         # WHEN
         response = self.app.get('/')
@@ -21,11 +21,11 @@ class FlaskAppTests(unittest.TestCase):
         # THEN
         self.assertEqual(response.status_code, 200)
         self.assertEqual(data['healthcheck'], 'ok')
-        self.assertEqual(data['internal_ip'], ip)
+        self.assertEqual(data['hostname'], hostname)
 
     def test_host_ip(self):
         # GIVEN
-        ip = socket.gethostbyname(socket.gethostname())
+        ip = os.uname()[1]
 
         # WHEN
         response = self.app.get('/host')
@@ -33,7 +33,7 @@ class FlaskAppTests(unittest.TestCase):
 
         # THEN
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(data['internal_ip'], ip)
+        self.assertEqual(data['hostname'], ip)
 
     # def test_fail(self):
     #     self.assertEqual(True, False)
