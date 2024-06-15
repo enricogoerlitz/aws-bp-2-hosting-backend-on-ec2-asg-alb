@@ -2,14 +2,14 @@ name: CD-Backend
 
 on:
   workflow_run:
-    workflows: ["CI-Backend"]
+    workflows: ["CI-Backend"]  # needs to be the NAME (top of the file) of CI Workflow!
     types:
       - completed
 
 
 jobs:
 
-  cd-Backend:
+  cd-backend:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
