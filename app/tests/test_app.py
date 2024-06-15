@@ -35,8 +35,8 @@ class FlaskAppTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(data['internal_ip'], ip)
 
-    def test_fail(self):
-        self.assertEqual(True, False)
+    # def test_fail(self):
+    #     self.assertEqual(True, False)
 
 
 if __name__ == '__main__':
