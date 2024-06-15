@@ -132,6 +132,7 @@ resource "aws_lb_listener" "listener_https_bp2_hosting_backend" {
 
 # Autoscaling Group
 resource "aws_autoscaling_group" "asg_bp2_hosting_backend" {
+    name                 = "asg-bp2-hosting-backend"
     desired_capacity     = 4
     max_size             = 5
     min_size             = 3
