@@ -11,7 +11,7 @@ def healthcheck():
     return jsonify({
         "healthcheck": "ok",
         "internal_ip": internal_ip,
-        "version": "v1"
+        "version": "v2"
     })
 
 
