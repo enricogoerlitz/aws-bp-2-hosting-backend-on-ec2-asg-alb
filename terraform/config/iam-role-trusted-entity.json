@@ -9,7 +9,7 @@
             "Action": "sts:AssumeRoleWithWebIdentity",
             "Condition": {
                 "StringLike": {
-                    "token.actions.githubusercontent.com:sub": "repo:enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb:ref:refs/heads/main"
+                    "token.actions.githubusercontent.com:sub": "repo:enricogoerlitz/aws-bp-2-hosting-backend-on-ec2-asg-alb:*"
                 }
             }
         }

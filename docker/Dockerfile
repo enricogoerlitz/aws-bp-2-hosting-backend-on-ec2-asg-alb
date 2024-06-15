@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY /app/requirements.txt /app/requirements.txt
 COPY /app/app.py /app/app.py
-COPY /docker /docker
 
 RUN pip install --no-cache-dir -r requirements.txt
 
